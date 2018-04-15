@@ -15,5 +15,13 @@
 		"autoloader",
 		"autoload",
 		"helper"
-	]
+	],
+	"autoload" : {
+		"classmap" : [
+			"wp-class-autoloader.php"
+		]
+	},
+	"require" : {
+		"php" : ">=5.3.0"
+	}
 }
