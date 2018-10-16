@@ -354,7 +354,12 @@ abstract class Autoloader
 
 	public static function register()
 	{
-		\spl_autoload_register([__CLASS__, 'autoload']);
+		static $once = false;
+
+		if (!$once) {
+			\spl_autoload_register([__CLASS__, 'autoload']);
+			$once = true;
+		}
 	}
 
 	public static function autoload(string $class)
